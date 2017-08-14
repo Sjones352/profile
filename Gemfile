@@ -1,11 +1,30 @@
 source 'https://rubygems.org'
 
+gem "caseflow", git: "https://github.com/department-of-veterans-affairs/caseflow-commons", ref: "ff94bc32a637c77230a3fa5f793e77966ec02c61"
+
+gem 'style-guide'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use SCSS for stylesheets
+
+ #Style
+gem "uswds-rails", git: "https://github.com/18F/uswds-rails-gem.git"
+
+gem 'pg', platforms: :ruby
+
+gem "puma", "~> 2.16.0"
+
+# React
+gem "react_on_rails", "~> 6.8.0"
+
+gem 'rubocop', '~> 0.36.0', require: false
+gem 'scss_lint', require: false
+gem 'jshint', platforms: :ruby
+
+# Used to colorize output for rake tasks
+gem "rainbow"
+
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -45,3 +64,6 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'rack-livereload', group: 'development'
+gem 'guard-livereload', group: 'development'
